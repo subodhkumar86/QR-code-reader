@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Reader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>QR Code Reader</h1>
+            <p>Scan a QR code to see the content in real-time.</p>
+        </div>
+
+        <!-- Video stream for QR scanning -->
+        <div class="video-container">
+            <video id="qrVideo" autoplay></video>
+            <div id="loadingSpinner" class="spinner"></div>
+        </div>
+        
+        <!-- Display scanned information -->
+        <div class="result-container" id="resultContainer">
+            <h3>Scanned QR Code Data:</h3>
+            <p id="qrResult">No QR Code detected</p>
+        </div>
+
+        <!-- Button to scan QR -->
+        <button id="startScan" class="scan-btn">Start Scanning</button>
+    </div>
+
+    <!-- Script for scanning and decoding QR -->
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
